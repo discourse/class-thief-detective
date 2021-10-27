@@ -21,8 +21,8 @@ export default {
         const timeline = document.querySelector('.timeline-container');
         if (timeline) observer.observe(timeline, { attributes: true });
 
-        const title = document.querySelector('.extra-info-wrapper');
-        if (title) observer.observe(title, { attributes: true });
+        // const title = document.querySelector('.extra-info-wrapper');
+        // if (title) observer.observe(title, { attributes: true });
       });
     });
   },
