@@ -18,24 +18,24 @@ export default {
         const timeline = document.querySelector('.timeline-container');
         if (timeline) observer.observe(timeline, { attributes: true });
       });
-    });
 
-    api.modifyClass('component:mount-widget', {
-      pluginId: 'class-thief-detective',
+      api.modifyClass('component:mount-widget', {
+        pluginId: 'class-thief-detective',
 
-      willClearRender() {
-        this._super(...arguments);
-        if (this._rootNode) {
-          debugger;
-        }
-      },
+        willClearRender() {
+          this._super(...arguments);
+          if (this._rootNode) {
+            debugger;
+          }
+        },
 
-      rerenderWidget() {
-        this._super(...arguments);
-        if (this._rootNode?.className === '') {
-          debugger;
-        }
-      },
+        rerenderWidget() {
+          this._super(...arguments);
+          if (this._rootNode?.className === '') {
+            debugger;
+          }
+        },
+      });
     });
   },
 };
