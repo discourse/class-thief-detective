@@ -19,5 +19,23 @@ export default {
         if (timeline) observer.observe(timeline, { attributes: true });
       });
     });
+
+    api.modifyClass('component:mount-widget', {
+      pluginId: 'class-thief-detective',
+
+      willClearRender() {
+        this._super(...arguments);
+        if (this._rootNode) {
+          debugger;
+        }
+      },
+
+      rerenderWidget() {
+        this._super(...arguments);
+        if (this._rootNode?.className === '') {
+          debugger;
+        }
+      },
+    });
   },
 };
